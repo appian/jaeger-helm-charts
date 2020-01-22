@@ -34,6 +34,10 @@ spec:
 {{ toYaml .Values.collector.podLabels | indent 8 }}
 {{- end }}
     spec:
+      securityContext:
+        runAsUser: {{ .Values.securityContext.runAsUser }}
+        runAsGroup: {{ .Values.securityContext.runAsGroup }}
+        fsGroup: {{ .Values.securityContext.fsGroup }}
       serviceAccountName: {{ template "jaeger.collector.serviceAccountName" . }}
       containers:
       - name: {{ template "jaeger.collector.name" . }}

@@ -28,6 +28,10 @@ spec:
 {{ toYaml .Values.agent.podLabels | indent 8 }}
 {{- end }}
     spec:
+      securityContext:
+        runAsUser: {{ .Values.securityContext.runAsUser }}
+        runAsGroup: {{ .Values.securityContext.runAsGroup }}
+        fsGroup: {{ .Values.securityContext.fsGroup }}
       {{- if .Values.agent.useHostNetwork }}
       hostNetwork: true
       {{- end }}

@@ -18,6 +18,10 @@ spec:
         {{- include "jaeger.selectorLabels" . | nindent 8 }}
         app.kubernetes.io/component: hotrod
     spec:
+      securityContext:
+        runAsUser: {{ .Values.securityContext.runAsUser }}
+        runAsGroup: {{ .Values.securityContext.runAsGroup }}
+        fsGroup: {{ .Values.securityContext.fsGroup }}
       serviceAccountName: {{ template "jaeger.hotrod.serviceAccountName" . }}
       containers:
         - name: {{ include "jaeger.fullname" . }}-hotrod
