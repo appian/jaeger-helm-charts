@@ -11,6 +11,12 @@ tag: 1.16.0
 nameOverride: ""
 fullnameOverride: ""
 
+# pod level security context
+podSecurityContext: {}
+
+# Container level security context
+securityContext: {}
+
 storage:
   # allowed values (cassandra, elasticsearch)
   type: cassandra
