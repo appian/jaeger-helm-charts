@@ -16,7 +16,7 @@ entries:
     - condition: provisionDataStore.kafka
       name: kafka
       repository: https://charts.bitnami.com/bitnami
-      version: ^11.8.4
+      version: ^12.16.0
     description: A Jaeger Helm chart for Kubernetes
     digest: 4a5e61b182518b089c4d47465d61f30688c374d1fd70742623facbaac27f2e14
     home: https://jaegertracing.io
@@ -42,8 +42,8 @@ entries:
     - https://hub.docker.com/u/jaegertracing/
     type: application
     urls:
-    - https://github.com/appian/jaeger-helm-charts/releases/download/v0.44.1/jaeger-0.44.1.tgz
-    version: 0.44.1
+    - https://github.com/appian/jaeger-helm-charts/releases/download/0.45.0/jaeger-0.45.0.tgz
+    version: 0.45.0
   - apiVersion: v2
     appVersion: 1.22.0
     created: "2021-04-01T12:48:10.18791051Z"
